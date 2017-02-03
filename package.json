@@ -1,6 +1,6 @@
 {
   "name": "ansible-npm",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "Install and update npm packages",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
