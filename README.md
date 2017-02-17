@@ -14,6 +14,7 @@ deploy_dir:     Required for where the base path lives
 ```YAML
   tags:
     - install
+    - packages
     - upgrade
 ```
 

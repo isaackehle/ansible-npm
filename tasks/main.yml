@@ -4,20 +4,20 @@
   shell: "npm install --quiet --silent"
   args:
     chdir: "{{ deploy_dir }}"
-  tags: ['install']
+  tags: ['install', 'packages']
 
 - name: Update packages based on package.json
   shell: "npm upgrade --quiet --silent"
   args:
     chdir: "{{ deploy_dir }}"
-  tags: ['install', 'upgrade']
+  tags: ['install', 'upgrade', 'packages']
 
 - name: Update global packages to their latest version.
   become: true
   shell: "npm upgrade --quiet --silent --global"
   args:
     chdir: "{{ deploy_dir }}"
-  tags: ['install', 'upgrade']
+  tags: ['install', 'upgrade', 'packages']
 
 #- name: Restart the server
 #  become: false
@@ -31,13 +31,13 @@
   args:
     chdir: "{{ deploy_dir }}"
   ignore_errors: true
-  tags: ['install', 'upgrade', 'restart']
+  tags: ['install', 'upgrade', 'restart', 'deploy']
 
 - name: restart server
   shell: "npm start"
   args:
     chdir: "{{ deploy_dir }}"
-  tags: ['install', 'upgrade', 'restart']
+  tags: ['install', 'upgrade', 'restart', 'deploy']
 
 
 
