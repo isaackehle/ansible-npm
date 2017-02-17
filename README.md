@@ -21,11 +21,8 @@ deploy_dir:     Required for where the base path lives
 
 ```YAML
 
-  - hosts: all
-  
+  - hosts: all  
     vars:
-      do_install:     true
-      do_update:      true
 
     roles:
       - { role: pgkehle.npm }

@@ -4,35 +4,40 @@
   shell: "npm install --quiet --silent"
   args:
     chdir: "{{ deploy_dir }}"
-  tags:
-    - install
-  when: ( do_install is defined and do_install|bool == true ) or
-        ( do_update is defined and do_update|bool == true )
+  tags: ['install']
 
 - name: Update packages based on package.json
   shell: "npm upgrade --quiet --silent"
   args:
     chdir: "{{ deploy_dir }}"
-  tags:
-    - upgrade
-  when: ( do_install is defined and do_install|bool == true ) or
-        ( do_update is defined and do_update|bool == true )
+  tags: ['install', 'upgrade']
 
 - name: Update global packages to their latest version.
   become: true
   shell: "npm upgrade --quiet --silent --global"
   args:
     chdir: "{{ deploy_dir }}"
-  tags:
-    - upgrade
-  when: ( do_install is defined and do_install|bool == true ) or
-        ( do_update is defined and do_update|bool == true )
+  tags: ['install', 'upgrade']
 
-- name: Restart the server.
-  become: false
-  shell: "npm run restart"
+#- name: Restart the server
+#  become: false
+#  shell: "npm run restart"
+#  args:
+#    chdir: "{{ deploy_dir }}"
+#  tags: ['install', 'upgrade', 'reboot']
+
+- name: npm stop
+  shell: "npm stop"
   args:
     chdir: "{{ deploy_dir }}"
-  tags:
-    - restart
-  when: ( do_restart is defined and do_restart|bool == true )
+  ignore_errors: true
+  tags: ['install', 'upgrade', 'restart']
+
+- name: restart server
+  shell: "npm start"
+  args:
+    chdir: "{{ deploy_dir }}"
+  tags: ['install', 'upgrade', 'restart']
+
+
+
