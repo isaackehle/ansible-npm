@@ -1,4 +1,4 @@
-# Ansible: npm
+# Ansible Role - npm
 
 Install and update npm packages
 
@@ -41,6 +41,6 @@ Paul Kehle
 ## For local development testing
 
 ```bash
-rsync -av ~/code/ansible-npm/* ~/.ansible/roles/pgkehle.npm
+rsync -av --delete ~/code/ansible-npm/* ~/.ansible/roles/pgkehle.npm
 ```
 
