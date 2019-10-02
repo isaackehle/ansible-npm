@@ -5,8 +5,9 @@ Install and update npm packages
 Available on Ansible Galaxy: [pgkehle.npm](https://galaxy.ansible.com/pgkehle/npm)
 
 ## Variables
+
 ```yaml
-deploy_dir:     Required for where the base path lives
+deploy_dir: Required for where the base path lives
 ```
 
 ## Tags
@@ -22,11 +23,18 @@ deploy_dir:     Required for where the base path lives
 
 ```YAML
 
-  - hosts: all  
+  - hosts: all
     vars:
 
     roles:
       - { role: pgkehle.npm }
+```
+
+## Linting
+
+```bash
+yamllint -c yamllint.yaml .
+ansible-lint .
 ```
 
 ## License
@@ -37,4 +45,3 @@ MIT
 
 Paul Kehle  
 @pgkehle ([twitter](https://twitter.com/pgkehle), [github](https://github.com/pgkehle), [linkedin](https://www.linkedin.com/in/pgkehle))
-
