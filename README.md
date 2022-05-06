@@ -2,7 +2,7 @@
 
 Install and update npm packages
 
-Available on Ansible Galaxy: [pgkehle.npm](https://galaxy.ansible.com/pgkehle/npm)
+Available on Ansible Galaxy: [isaackehle.npm](https://galaxy.ansible.com/isaackehle/npm)
 
 ## Variables
 
@@ -27,7 +27,7 @@ deploy_dir: Required for where the base path lives
     vars:
 
     roles:
-      - { role: pgkehle.npm }
+      - { role: isaackehle.npm }
 ```
 
 ## Linting
@@ -43,5 +43,5 @@ MIT
 
 ## Author Information
 
-Paul Kehle  
-@pgkehle ([twitter](https://twitter.com/pgkehle), [github](https://github.com/pgkehle), [linkedin](https://www.linkedin.com/in/pgkehle))
+Isaac Kehle
+@isaackehle ([twitter](https://twitter.com/isaackehle), [github](https://github.com/isaackehle), [linkedin](https://www.linkedin.com/in/isaackehle))

@@ -1,6 +1,6 @@
 {
   "name": "ansible-npm",
-  "version": "1.0.6",
+  "version": "2.0.0",
   "description": "Install and update npm packages",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pgkehle/ansible-npm.git"
+    "url": "git+https://github.com/isaackehle/ansible-npm.git"
   },
-  "author": "Paul Kehle (pgkehle@gmail.com)",
+  "author": "Isaac Kehle (isaac@kehle.org)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pgkehle/ansible-npm/issues"
+    "url": "https://github.com/isaackehle/ansible-npm/issues"
   },
-  "homepage": "https://github.com/pgkehle/ansible-npm#readme",
+  "homepage": "https://github.com/isaackehle/ansible-npm#readme",
   "main": "tasks/main.yml",
   "keywords": [
     "ansible"
